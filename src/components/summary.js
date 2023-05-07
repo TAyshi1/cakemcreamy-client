@@ -19,10 +19,10 @@ function Business() {
 
   useEffect(() => {
     function handleScroll() {
-      const businessPosition = businessRef.current.getBoundingClientRect();
+      const businessPosition = businessRef.current?.getBoundingClientRect();
       if (
-        businessPosition.top < window.innerHeight * 0.75 &&
-        businessPosition.bottom > window.innerHeight * 0.25
+        businessPosition?.top < window.innerHeight * 0.75 &&
+        businessPosition?.bottom > window.innerHeight * 0.25
       ) {
         setTimeout(() => {
             const newCustomerCount = Math.min(customerCount + 1, 320);
@@ -43,8 +43,8 @@ function Business() {
 
     const businessPosition = businessRef.current.getBoundingClientRect();
     if (
-      businessPosition.top < window.innerHeight * 0.75 &&
-      businessPosition.bottom > window.innerHeight * 0.25
+      businessPosition?.top < window.innerHeight * 0.75 &&
+      businessPosition?.bottom > window.innerHeight * 0.25
     ) {
       setTimeout(() => {
         const newCustomerCount = Math.min(customerCount + 1, 320);
